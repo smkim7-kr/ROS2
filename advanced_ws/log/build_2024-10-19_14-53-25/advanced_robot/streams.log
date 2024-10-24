@@ -1,0 +1,54 @@
+[0.009s] Invoking command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/smkim/spatialai_tutorial/ROS2/advanced_ws/src -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot
+[0.116s] -- The C compiler identification is GNU 11.4.0
+[0.488s] -- The CXX compiler identification is GNU 11.4.0
+[0.763s] -- Detecting C compiler ABI info
+[0.883s] -- Detecting C compiler ABI info - done
+[0.889s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.889s] -- Detecting C compile features
+[0.889s] -- Detecting C compile features - done
+[0.891s] -- Detecting CXX compiler ABI info
+[1.024s] -- Detecting CXX compiler ABI info - done
+[1.029s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.029s] -- Detecting CXX compile features
+[1.030s] -- Detecting CXX compile features - done
+[1.031s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.294s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.340s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.355s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.407s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.408s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.409s] -- Added test 'lint_cmake' to check CMake code style
+[1.409s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.410s] -- Added test 'xmllint' to check XML markup files
+[1.411s] -- Configuring done
+[1.414s] -- Generating done
+[1.414s] -- Build files have been written to: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot
+[1.418s] Invoked command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/smkim/spatialai_tutorial/ROS2/advanced_ws/src -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot
+[1.420s] Invoking command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot -- -j8 -l8
+[1.445s] Invoked command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot -- -j8 -l8
+[1.466s] Invoking command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot
+[1.471s] -- Install configuration: ""
+[1.471s] -- Execute custom install script
+[1.472s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/config/empty.yaml
+[1.478s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/inertial_macros.xacro
+[1.484s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/material_color.xacro
+[1.488s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/robot.urdf.xacro
+[1.493s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/robot_core.xacro
+[1.498s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/launch/rsp.launch.py
+[1.503s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/worlds/empty.world
+[1.508s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/ament_index/resource_index/package_run_dependencies/advanced_robot
+[1.514s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/ament_index/resource_index/parent_prefix_path/advanced_robot
+[1.521s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/environment/ament_prefix_path.sh
+[1.526s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/environment/ament_prefix_path.dsv
+[1.531s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/environment/path.sh
+[1.538s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/environment/path.dsv
+[1.543s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/local_setup.bash
+[1.547s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/local_setup.sh
+[1.554s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/local_setup.zsh
+[1.558s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/local_setup.dsv
+[1.563s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/package.dsv
+[1.569s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/ament_index/resource_index/packages/advanced_robot
+[1.575s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/cmake/advanced_robotConfig.cmake
+[1.581s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/cmake/advanced_robotConfig-version.cmake
+[1.587s] -- Symlinking: /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/package.xml
+[1.593s] Invoked command in '/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot

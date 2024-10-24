@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Include inertial macros for predefined calculations -->
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <!-- Define material color rgba at external files -->
+    <xacro:include filename="material_color.xacro"/>
+    
+    <!-- Base link is the main coordinate frame -->
+    <link name="base_link"/>
+
+    <!-- Chassis Joint -->
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="-0.1 0 0"/>
+    </joint>
+
+    <!-- Chassis Link -->
+    <link name="chassis">
+        <visual>
+            <origin xyz="0.25 0 0.15"/>
+            <geometry>
+                <box size="0.5 0.5 0.3"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <origin xyz="0.25 0 0.15"/>
+            <geometry>
+                <box size="0.5 0.5 0.3"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="1.0" x="0.5" y="0.5" z="0.3">
+            <origin xyz="0.25 0 0.15" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- to visualize color attributes in Gazebo simulator-->
+    <gazebo reference="chassis">
+        <material>Gazebo/Purple</material>
+    </gazebo>
+
+    <!-- Four-Wheel Configuration -->
+
+    <!-- Front Left Wheel -->
+    <joint name="front_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="front_left_wheel"/>
+        <origin xyz="0.3 0.25 0" rpy="-${pi/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="front_left_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- Front Right Wheel -->
+    <joint name="front_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="front_right_wheel"/>
+        <origin xyz="0.3 -0.25 0" rpy="${pi/2} 0 0"/>
+        <axis xyz="0 0 -1"/>
+    </joint>
+
+    <link name="front_right_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- Rear Left Wheel -->
+    <joint name="rear_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rear_left_wheel"/>
+        <origin xyz="0 0.25 0" rpy="-${pi/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="rear_left_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <gazebo reference="rear_left_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- Rear Right Wheel -->
+    <joint name="rear_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rear_right_wheel"/>
+        <origin xyz="0 -0.25 0" rpy="${pi/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="rear_right_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    
+    <gazebo reference="rear_right_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <!-- TODO: When using prismatic joint, not displayed properly in rviz (w/ gazebo) -->
+    <joint name="top_hemisphere_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="top_hemisphere"/>
+        <origin xyz="0.15 0 0.3"/>
+        <!-- <axis xyz="1 0 0"/>  Allows sliding in the X-axis direction -->
+        <!-- <limit lower="-0.1" upper="0.1" effort="1.0" velocity="0.1"/> -->
+    </joint>
+
+     <!-- Semi-Hemisphere on Top with Sliding X-Direction Capability -->
+     <link name="top_hemisphere">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <sphere radius="0.15"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <sphere radius="0.15"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_sphere mass="0.2" radius="0.15">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_sphere>
+    </link>
+
+    <gazebo reference="top_hemisphere">
+        <material>Gazebo/Red</material>
+        <!-- <publish_tf>false</publish_tf> -->
+    </gazebo>
+
+</robot>

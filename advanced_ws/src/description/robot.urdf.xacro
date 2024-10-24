@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- this xacro file is composed with different xacro files -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <!-- robot_core.xacro describes robot shape and joints -->
+    <xacro:include filename="robot_core.xacro"/>
+    
+    <!-- gazebo_control.xacro is a control plugin for gazebo -->
+    <xacro:include filename="gazebo_control.xacro"/>
+
+    <!-- lidar.xacro for lidar sensor -->
+    <xacro:include filename="lidar.xacro"/>
+
+    <!-- camera.xacro for lidar sensor -->
+    <xacro:include filename="camera.xacro"/>
+
+</robot>
