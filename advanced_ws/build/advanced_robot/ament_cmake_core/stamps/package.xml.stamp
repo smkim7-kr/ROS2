@@ -7,6 +7,9 @@
   <maintainer email="kuscus.cod3@gmail.com">SUKMIN KIM</maintainer>
   <license>Apache</license>
 
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>image_pipeline</exec_depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

@@ -7,11 +7,13 @@
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/material_color.xacro
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/robot.urdf.xacro
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/description/robot_core.xacro
+/home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/launch/image_processing.py
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/launch/launch_sim.launch.py
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/launch/rsp.launch.py
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/worlds/empty.world
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/worlds/village.world
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/camera/camera_info.py
+/home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/lib/advanced_robot/camera_info.py
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/ament_index/resource_index/package_run_dependencies/advanced_robot
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/ament_index/resource_index/parent_prefix_path/advanced_robot
 /home/smkim/spatialai_tutorial/ROS2/advanced_ws/install/advanced_robot/share/advanced_robot/environment/ament_prefix_path.sh

@@ -313,6 +313,9 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "config" "description" "launch" "worlds" "camera" "DESTINATION" "share/advanced_robot")
 ament_cmake_symlink_install_directory("/home/smkim/spatialai_tutorial/ROS2/advanced_ws/src" DIRECTORY "config" "description" "launch" "worlds" "camera" "DESTINATION" "share/advanced_robot")
 
+# install(PROGRAMS "camera/camera_info.py" "DESTINATION" "lib/advanced_robot")
+ament_cmake_symlink_install_programs("/home/smkim/spatialai_tutorial/ROS2/advanced_ws/src" PROGRAMS "camera/camera_info.py" "DESTINATION" "lib/advanced_robot")
+
 # install(FILES "/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/advanced_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/smkim/spatialai_tutorial/ROS2/advanced_ws/src" FILES "/home/smkim/spatialai_tutorial/ROS2/advanced_ws/build/advanced_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/advanced_robot" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

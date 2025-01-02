@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import CameraInfo
@@ -8,7 +10,7 @@ class CameraInfoPrinter(Node):
         # Subscribe to the /camera_info topic
         self.camera_info_subscriber = self.create_subscription(
             CameraInfo,
-            '/camera_info',
+            '/camera/camera_info',
             self.camera_info_callback,
             10
         )
@@ -38,3 +40,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+    

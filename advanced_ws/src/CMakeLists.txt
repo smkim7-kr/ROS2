@@ -37,4 +37,10 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(PROGRAMS
+  camera/camera_info.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 ament_package()
